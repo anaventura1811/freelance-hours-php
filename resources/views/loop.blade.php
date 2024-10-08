@@ -11,13 +11,12 @@
   <body>
     <script src="" async defer></script>
 
-    <?php echo 'Oi, estou aprendendo php'; ?>
-    <?php foreach(range(1,20) as $key):?>
-    <li>
-      <?php echo $key; ?>
-    </li>
-    
-    <?php endforeach; ?>
+     <?php echo 'Oi, estou aprendendo php'; ?>
+      @foreach (range(1,20) as $key)
+        <li>
+          {{ $key }}
+        </li>
+      @endforeach
 
   </body>
 </html>
