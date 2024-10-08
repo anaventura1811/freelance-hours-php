@@ -11,5 +11,9 @@
   <body>
     <script src="" async defer></script>
 
+    @auth
+      <span>Você está autenticado.</span>
+    @endauth
+
   </body>
 </html>

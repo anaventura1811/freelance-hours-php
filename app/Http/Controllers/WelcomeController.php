@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class WelcomeController extends Controller
 {
@@ -25,11 +27,14 @@ class WelcomeController extends Controller
         // $user->email_verified_at = now();
         // $user->save();
 
-        $user->update(['email_verified_at' => now()->subMonths(10)]);
+        // $user->update(['email_verified_at' => now()->subMonths(10)]);
 
-        dd($user->email_verified_at);
+        // dd($user->email_verified_at);
 
         // now()->date;
+
+        Auth::login($user);
+        // Auth::logout();
 
        return view('test.ana');
     }
