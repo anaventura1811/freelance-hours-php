@@ -33,7 +33,7 @@ class WelcomeController extends Controller
 
         // now()->date;
 
-        Auth::login($user);
+        // Auth::login($user);
         // Auth::logout();
 
        return view('test.ana');

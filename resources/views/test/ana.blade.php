@@ -15,5 +15,9 @@
       <span>Você está autenticado.</span>
     @endauth
 
+    <x-layouts.app>
+       <livewire:teste />
+    </x-layouts.app>
+
   </body>
 </html>
