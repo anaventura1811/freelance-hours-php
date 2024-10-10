@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('proposals', function (Blueprint $table) {
             $table->id();
             $table->string('email');
+            $table->string('author');
             $table->unsignedSmallInteger('hours');
             $table->foreignIdFor(Project::class)->constrained();
             $table->timestamps();

@@ -1,12 +1,4 @@
-<div>
-   componente livewire project show
 
-   <pre>
+    
+<x-projects.card :$project />
 
-        title: {{ $project->title }}
-        
-        description: {!! $project->description !!}
-
-   </pre>
-
-</div>
