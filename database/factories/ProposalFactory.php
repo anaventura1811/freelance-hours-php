@@ -19,7 +19,6 @@ class ProposalFactory extends Factory
     {
         return [
             'email' => fake()->safeEmail(),
-            'author'=> fake()->name(),
             'hours' => fake()->numberBetween(1,120),
             'project_id' => Project::factory(),
         ];
