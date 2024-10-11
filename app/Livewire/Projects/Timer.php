@@ -9,6 +9,8 @@ class Timer extends Component
 {
     public Project $project;
 
+    public bool $spacing = true;
+
     public function render()
     {
         $diff = now()->diff($this->project->ends_at);
