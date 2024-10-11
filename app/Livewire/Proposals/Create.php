@@ -15,6 +15,8 @@ class Create extends Component
 
     public int $hours = 0;
 
+    public bool $agree = false;
+
     protected $rules = [
 
         'email' => 'required',
@@ -25,6 +27,11 @@ class Create extends Component
 
     public function save()
     {
+        if (!$this->agree) {
+            $this->addError('agree', 'Você precisa concordar com os termos de uso');
+            return;
+        }
+
         $this->validate();
 
         $this->project->proposals()
